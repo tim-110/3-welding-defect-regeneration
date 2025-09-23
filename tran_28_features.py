@@ -39,7 +39,7 @@ class WeldingDefectTrainer:
             Dropout(0.3),  # 随机丢弃30%神经元，防止过拟合
 
             # 隐藏层
-            Dense(64, activation='relu'),
+            Dense(96, activation='relu'),
             BatchNormalization(),
             Dropout(0.2),
 
@@ -212,4 +212,5 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"❌ 训练失败: {e}")
         traceback.print_exc()  # 打印详细错误堆栈，便于排查问题  X_train_scaled, y_train,
+
     validation_data=(X_val_scaled, y_val),
